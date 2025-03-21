@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom'; // Import de Router
-import Navbar from './Navbar';  // Si tu veux avoir une barre de navigation
 import RouterComponent from './pages/Router';  // Import du composant Router
 
 function App() {
