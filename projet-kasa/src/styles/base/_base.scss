@@ -1,4 +1,21 @@
+@use "../utils/variables" as *;
+
 body {
+  font-family: $font-family-base;
+  margin: 0;
+}
+
+header,
+main {
   margin: 45px 100px;
-  font-family: "Montserrat";
+}
+
+h2 {
+  color: $primary-color;
+  font-size: $title-font-size;
+  font-weight: 500;
+}
+
+p {
+  font-size: $p-font-size;
 }

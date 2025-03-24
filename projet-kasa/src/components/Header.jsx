@@ -1,7 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom"; // Utiliser NavLink
 import logo from "../assets/logo.png";
-// import Banner from "./Banner"; // Importer le composant Banner
 
 const Header = () => {
   return (
@@ -27,7 +26,6 @@ const Header = () => {
           </li>
         </ul>
       </nav>
-      {/* <Banner /> Insertion du composant Banner ici */}
     </header>
   );
 };
