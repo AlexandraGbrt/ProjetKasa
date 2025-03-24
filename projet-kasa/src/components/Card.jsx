@@ -1,7 +1,13 @@
 import React from "react";
 
-const Card = () => {
-  return <section className="cards"></section>;
+//prop {logement}
+const Card = ({ logement }) => {
+  return (
+    <div className="card">
+      <img src={logement.cover} alt={logement.title} />
+      <h3>{logement.title}</h3>
+    </div>
+  );
 };
 
 export default Card;

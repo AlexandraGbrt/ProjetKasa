@@ -1,12 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Banner from "../components/Banner";
-// import Card from "../components/Card";
+import logementsData from "../../data/logements.json";
+import Card from "../components/Card";
 
 const Home = () => {
+  const [logements, setLogements] = useState([]);
+
+  useEffect(() => {
+    setLogements(logementsData);
+  }, []);
+
   return (
     <main>
-      <Banner /> {/* Afficher Banner */}
-      {/* <Card /> Afficher Card */}
+      <Banner />
+      <section className="card-container">
+        {logements.map((logement) => (
+          <Card key={logement.id} logement={logement} />
+        ))}
+      </section>
     </main>
   );
 };
