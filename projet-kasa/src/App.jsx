@@ -1,12 +1,22 @@
-import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom'; // Import de Router
-import RouterComponent from './pages/Router';  // Import du composant Router
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Header from "./components/Header";
+// import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import "./styles/main.scss";
 
 function App() {
   return (
     <Router>
-      <Navbar /> {/* Ajoute la barre de navigation */}
-      <RouterComponent /> {/* Le composant qui gère les routes */}
+      <Header />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+
+      {/* <Footer /> */}
     </Router>
   );
 }
