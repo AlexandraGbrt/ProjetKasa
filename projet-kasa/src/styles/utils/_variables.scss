@@ -4,6 +4,9 @@ $primary-color: #ff6060;
 $second-color: black;
 $third-color: white;
 
+$section-bg-color: #f6f6f6;
+$collapse-bg-color: #f6f6f673;
+
 // POLICE ET TAILLE DU TEXTE //
 $text-color: white;
 $second-text-color: black;
@@ -17,5 +20,7 @@ $p-font-size: 18px;
 $linear-cards: linear-gradient(
   180deg,
   rgba(255, 255, 255, 0) 0%,
+  rgba(10, 10, 10, 0) 42%,
+  rgba(4, 4, 4, 0.205) 99.99%,
   rgba(0, 0, 0, 0.5) 100%
 );

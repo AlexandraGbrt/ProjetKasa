@@ -9,15 +9,14 @@
   justify-content: center;
   align-items: center;
 
-  .banner-background {
+  .banner-image {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url("../assets/imgHome.png");
-    background-size: cover;
-    background-position: center;
+    object-fit: cover;
+    object-position: center;
     border-radius: 25px;
     // opacity: 0.9;
     filter: brightness(40%);
@@ -32,5 +31,13 @@
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     // -webkit-text-stroke-width: 1px;
     // -webkit-text-stroke-color: black;
+  }
+}
+
+// Banner page A Propos //
+
+.banner-about {
+  .banner-image {
+    filter: brightness(65%);
   }
 }

@@ -1,9 +1,14 @@
 @use "./utils/variables" as *;
 @use "./utils/mixins" as *;
-@use "./layout/_header";
-@use "./layout/footer";
+
 @use "./base/_base";
-@use "./pages/home";
-@use "./pages/error";
+
 @use "./components/banner";
 @use "./components/card";
+@use "./components/collapse";
+
+@use "./layout/_header";
+@use "./layout/footer";
+
+@use "./pages/home";
+@use "./pages/error";

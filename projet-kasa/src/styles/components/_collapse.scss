@@ -1,0 +1,47 @@
+@use "../utils/variables" as *;
+
+.collapse {
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    .collapse-title {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: $primary-color;
+        color: $text-color;
+        border: none;
+        font-size: 24px;
+        font-weight: 500; // maquette 700 //
+        padding: 10px 20px 10px 15px;
+        border-radius: 5px;
+
+        .collapse-arrow {
+            color: $text-color;
+            cursor: pointer;
+            // transition: transform 0.7s ease-in-out;
+        }
+
+        // .collapse-arrow.open {
+        //     transform: rotateZ(-180deg);
+        // }
+    }
+
+    .collapse-content {
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+    }
+
+    .collapse-content.open {
+        max-height: 500px;
+        padding: 25px 28px 20px 20px;
+        background-color: $collapse-bg-color;
+        margin: 0;
+        border-radius: 5px;
+    }
+}
