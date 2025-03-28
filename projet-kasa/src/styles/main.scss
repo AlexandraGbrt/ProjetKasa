@@ -5,6 +5,7 @@
 
 @use "./components/banner";
 @use "./components/card";
+@use "./components/carrousel";
 @use "./components/collapse";
 
 @use "./layout/_header";
@@ -12,3 +13,4 @@
 
 @use "./pages/home";
 @use "./pages/error";
+@use "./pages/rental";

@@ -5,7 +5,10 @@ body {
   overflow-x: hidden;
 }
 
-body {
+body,
+h1,
+h2,
+p {
   font-family: $font-family-base;
   margin: 0;
 }
@@ -21,8 +24,16 @@ h2 {
   font-weight: 500;
 }
 
-p {
+p,
+ul,
+li {
   font-size: $p-font-size;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
 }
 
 button {
