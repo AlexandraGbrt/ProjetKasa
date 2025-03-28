@@ -6,7 +6,7 @@ const Collapse = ({ title, content }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   // Fonction pour basculer l'état entre ouvert et fermé
-  const toggleCollapse = () => {
+  const changeCollapse = () => {
     setIsOpen(!isOpen);
   };
 
@@ -18,7 +18,7 @@ const Collapse = ({ title, content }) => {
           src={isOpen ? arrowUp : arrowDown}
           className={`collapse-arrow ${isOpen ? "open" : ""}`}
           alt="arrow"
-          onClick={toggleCollapse}
+          onClick={changeCollapse}
         />
       </button>
       {/* {isOpen && <p className="collapse-content">{content}</p>} */}

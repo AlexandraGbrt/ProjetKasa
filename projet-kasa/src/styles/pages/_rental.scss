@@ -2,28 +2,17 @@
 // @use "../utils/mixins" as *;
 
 .rental {
-
-    .carrousel {
-
-        // width: 1240px;
-        // max-height: 415px;
-
-        img {
-            width: 1240px;
-            max-height: 415px;
-            border-radius: 25px;
-            object-fit: cover;
-
-        }
-
-    }
-
     .rental-content {
         display: flex;
         justify-content: space-between;
         margin-top: 30px;
 
         .rental-info {
+
+            p {
+                margin-top: 5px;
+            }
+
             .tag {
                 display: flex;
                 flex-direction: row;
@@ -34,8 +23,7 @@
                     background-color: $primary-color;
                     border-radius: 25px;
                     color: white;
-                    width: 115px;
-                    height: 25px;
+                    padding: 3px 30px 3px 30px;
                     text-align: center;
                     font-size: 14px;
                     font-weight: 500; // maquette 700
@@ -56,7 +44,6 @@
                     text-align: right;
                     margin-right: 10px;
                     color: $primary-color;
-
                 }
 
                 img {
@@ -64,6 +51,10 @@
                     width: 64px;
                     height: 64px;
                 }
+            }
+
+            .rating {
+                margin-top: 20px;
             }
         }
 

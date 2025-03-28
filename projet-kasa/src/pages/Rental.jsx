@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import logementsData from "../../data/logements.json";
 import Collapse from "../components/Collapse";
 import Tag from "../components/Tag";
+import Rating from "../components/Rating";
 
 const Rental = () => {
   const { id } = useParams(); // Récupère l'ID depuis l'URL
@@ -10,8 +11,8 @@ const Rental = () => {
 
   useEffect(() => {
     // Recherche le logement avec l'ID correspondant
-    const logementTrouve = logementsData.find((logement) => logement.id === id);
-    setLogement(logementTrouve);
+    const logementFind = logementsData.find((logement) => logement.id === id);
+    setLogement(logementFind);
   }, [id]);
 
   if (!logement) {
@@ -36,7 +37,7 @@ const Rental = () => {
             <p>{logement.host.name}</p>
             <img src={logement.host.picture} />
           </div>
-          <p>{logement.rating}</p>
+          <Rating score={logement.rating} />
         </div>
       </section>
 
