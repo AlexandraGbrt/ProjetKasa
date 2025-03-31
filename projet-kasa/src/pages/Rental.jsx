@@ -4,6 +4,7 @@ import logementsData from "../../data/logements.json";
 import Collapse from "../components/Collapse";
 import Tag from "../components/Tag";
 import Rating from "../components/Rating";
+import Carrousel from "../components/Carrousel";
 
 const Rental = () => {
   const { id } = useParams(); // Récupère l'ID depuis l'URL
@@ -22,7 +23,8 @@ const Rental = () => {
   return (
     <main className="rental">
       <section className="carrousel">
-        <img src={logement.cover} alt="img-card" />
+        {/* utilisation props "slides" pour le carrousel */}
+        <Carrousel slides={logement.pictures} />
       </section>
 
       <section className="rental-content">

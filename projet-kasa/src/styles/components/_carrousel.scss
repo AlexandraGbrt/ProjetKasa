@@ -1,7 +1,46 @@
-.carrousel img {
-    width: 100%;
-    max-height: 415px;
-    border-radius: 25px;
-    object-fit: cover;
+@use "../utils/variables" as *;
 
+.carrousel {
+    position: relative;
+
+    .carrousel-slide {
+
+        .slide-img {
+            width: 100%;
+            height: 415px;
+            border-radius: 25px;
+            object-fit: cover;
+
+            .carrousel-img {
+                width: 100%;
+                height: 100%;
+                border-radius: 25px;
+                object-fit: cover;
+            }
+        }
+
+        .arrow {
+            position: absolute;
+        }
+
+        .arrow-left {
+            left: 23px;
+            top: 150px;
+        }
+
+        .arrow-right {
+            right: 23px;
+            top: 150px;
+        }
+
+        .slide-number {
+            position: absolute;
+            left: 50%;
+            bottom: 25px;
+            color: $text-color;
+            font-size: 18px;
+            font-weight: 500;
+
+        }
+    }
 }

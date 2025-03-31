@@ -23,22 +23,28 @@
         .collapse-arrow {
             color: $text-color;
             cursor: pointer;
-            // transition: transform 0.7s ease-in-out;
+            transition: transform 0.3s ease;
         }
 
-        // .collapse-arrow.open {
-        //     transform: rotateZ(-180deg);
+        .collapse-arrow.open {
+            transform: rotate(-180deg);
+        }
+
+        // .collapse-arrow.close {
+        //     transform: rotate(-180deg);
         // }
+
+
     }
 
     .collapse-content {
         overflow: hidden;
-        max-height: 0;
-        transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+        height: 0;
+        transition: height 0.4s ease, padding 0.4s ease;
     }
 
     .collapse-content.open {
-        max-height: 500px;
+        height: auto;
         padding: 25px 28px 20px 20px;
         background-color: $collapse-bg-color;
         margin: 0;

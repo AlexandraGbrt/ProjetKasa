@@ -3,11 +3,11 @@ import arrowUp from "../assets/arrowUp.png";
 import arrowDown from "../assets/arrowDown.png";
 
 const Collapse = ({ title, content }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [open, setOpen] = useState(false);
 
-  // Fonction pour basculer l'état entre ouvert et fermé
+  // Fonction pour basculer entre ouvert et fermé
   const changeCollapse = () => {
-    setIsOpen(!isOpen);
+    setOpen(!open);
   };
 
   return (
@@ -15,16 +15,15 @@ const Collapse = ({ title, content }) => {
       <button className="collapse-title">
         {title}
         <img
-          src={isOpen ? arrowUp : arrowDown}
-          className={`collapse-arrow ${isOpen ? "open" : ""}`}
+          src={open ? arrowUp : arrowDown}
+          className={`collapse-arrow ${open ? "open" : ""}`}
           alt="arrow"
           onClick={changeCollapse}
         />
       </button>
-      {/* {isOpen && <p className="collapse-content">{content}</p>} */}
 
-      <div className={`collapse-content ${isOpen ? "open" : ""}`}>
-        {/* Si le contenu est un tableau, afficher chaque élément dans une liste */}
+      <div className={`collapse-content ${open ? "open" : ""}`}>
+        {/* Si contenu tableau : afficher chaque élément dans une liste */}
         {Array.isArray(content) ? (
           <ul>
             {content.map((item, index) => (
