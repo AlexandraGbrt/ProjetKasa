@@ -8,6 +8,7 @@ body {
 body,
 h1,
 h2,
+h3,
 p {
   font-family: $font-family-base;
   margin: 0;
@@ -16,20 +17,33 @@ p {
 header,
 main {
   margin: 45px 100px;
+
+  @media (max-width: 768px) {
+    margin: auto 20px;
+  }
 }
 
 h2 {
   color: $primary-color;
-  font-size: $title-font-size;
+  font-size: 36px;
   font-weight: 500;
+  margin-bottom: 5px;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
 }
 
 p,
 ul,
 li {
-  font-size: $p-font-size;
+  font-size: 18px;
   margin: 0;
   padding: 0;
+
+  // @media (max-width: 768px) {
+  //   font-size: 14px;
+  // }
 }
 
 li {
@@ -37,5 +51,5 @@ li {
 }
 
 button {
-  font-family: $font-family-base;
+  font-family: 36px;
 }

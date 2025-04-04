@@ -1,5 +1,4 @@
 @use "../utils/variables" as *;
-// @use "../utils/mixins" as *;
 
 .rental {
     .rental-content {
@@ -7,32 +6,19 @@
         justify-content: space-between;
         margin-top: 30px;
 
-        .rental-info {
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
 
-            p {
-                margin-top: 5px;
-            }
-
-            .tag {
-                display: flex;
-                flex-direction: row;
-                margin-top: 20px;
-                gap: 10px;
-
-                li {
-                    background-color: $primary-color;
-                    border-radius: 25px;
-                    color: white;
-                    padding: 3px 30px 3px 30px;
-                    text-align: center;
-                    font-size: 14px;
-                    font-weight: 500; // maquette 700
-                }
-
+        .rental-info p {
+            @media (max-width: 768px) {
+                font-size: 14px;
             }
         }
 
+
         .rental-host {
+
             .host-info {
                 display: flex;
                 flex-direction: row;

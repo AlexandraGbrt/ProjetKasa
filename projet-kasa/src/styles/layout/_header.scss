@@ -1,4 +1,9 @@
 header {
+
+  @media (max-width: 768px) {
+    margin: 20px;
+  }
+
   nav {
     display: flex;
     justify-content: space-between;
@@ -7,6 +12,10 @@ header {
     img {
       height: 68px;
       // width: 15%;
+
+      @media (max-width: 768px) {
+        height: 47px;
+      }
     }
 
     ul {
@@ -15,11 +24,28 @@ header {
       gap: 20px;
       list-style-type: none;
 
+      //     @media (max-width: 768px){
+      //       font-size: 12px;
+      //       text-transform: uppercase;
+      //       gap: 26px;
+      //       text-underline-offset: 2px;
+      //       margin-right: 20px;
+
+      // }
+
       li a {
         text-decoration: none;
         color: inherit;
         font-size: 24px;
         padding-left: 50px;
+
+        @media (max-width: 768px) {
+          font-size: 12px;
+          text-transform: uppercase;
+          padding-left: 50px;
+          // margin-right: 20px;
+
+        }
       }
 
       li a.active {

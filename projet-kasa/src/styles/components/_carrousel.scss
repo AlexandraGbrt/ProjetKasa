@@ -8,19 +8,36 @@
         .slide-img {
             width: 100%;
             height: 415px;
-            border-radius: 25px;
+            // border-radius: 25px;
             object-fit: cover;
+
+            @media (max-width: 768px) {
+                height: 255px;
+            }
 
             .carrousel-img {
                 width: 100%;
                 height: 100%;
                 border-radius: 25px;
                 object-fit: cover;
+
+                @media (max-width: 768px) {
+                    border-radius: 10px;
+                }
             }
+
         }
 
         .arrow {
             position: absolute;
+
+            img {
+                @media (max-width: 768px) {
+                    height: 20px;
+                    width: 12px;
+                }
+            }
+
         }
 
         .arrow-left {

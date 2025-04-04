@@ -9,6 +9,11 @@
   justify-content: center;
   align-items: center;
 
+  @media (max-width: 768px) {
+    height: 111px;
+    margin-top: 27px;
+  }
+
   .banner-image {
     position: absolute;
     top: 0;
@@ -20,19 +25,37 @@
     border-radius: 25px;
     // opacity: 0.9;
     filter: brightness(40%);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+    @media (max-width: 768px) {
+      border-radius: 10px;
+      box-shadow: none;
+    }
   }
 
-  .banner-content {
+  .banner-content h1 {
     position: relative;
     color: $text-color;
     padding: 20px;
     text-align: center;
-    font-size: 30px;
+    font-size: 48px;
+    font-weight: 700;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    // -webkit-text-stroke-width: 1px;
-    // -webkit-text-stroke-color: black;
+
+    @media (max-width: 768px) {
+      font-size: 24px;
+      width: 70%;
+      text-align: start;
+      margin-left: 16px;
+      padding: 0;
+
+    }
   }
+
+  // -webkit-text-stroke-width: 1px;
+  // -webkit-text-stroke-color: black;
 }
+
 
 // Banner page A Propos //
 

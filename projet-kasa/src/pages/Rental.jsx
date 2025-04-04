@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import logementsData from "../../data/logements.json";
 import Collapse from "../components/Collapse";
 import Tag from "../components/Tag";
@@ -9,6 +9,7 @@ import Carrousel from "../components/Carrousel";
 const Rental = () => {
   const { id } = useParams(); // Récupère l'ID depuis l'URL
   const [logement, setLogement] = useState(null);
+  const navigate = useNavigate(); // Navigate pour erreur d'Id ci dessous
 
   useEffect(() => {
     // Recherche le logement avec l'ID correspondant
@@ -17,7 +18,8 @@ const Rental = () => {
   }, [id]);
 
   if (!logement) {
-    return <div>Chargement...</div>;
+    navigate("/error");
+    return null;
   }
 
   return (

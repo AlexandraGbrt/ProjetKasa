@@ -6,9 +6,13 @@ const Card = ({ logement }) => {
   return (
     <Link to={`/Rental/${logement.id}`} className="card-a">
       <div className="card">
-        <img src={logement.cover} alt={logement.title} />
-        <h3>{logement.title}</h3>
-        <div className="overlay"></div>
+        <div className="card-img">
+          <img src={logement.cover} alt={logement.title} />
+          <div className="overlay"></div>
+        </div>
+        <div className="card-txt">
+          <h3>{logement.title}</h3>
+        </div>
       </div>
     </Link>
   );

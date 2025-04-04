@@ -32,7 +32,7 @@ const aboutDatas = [
 
 const About = () => {
   return (
-    <main>
+    <main className="about">
       <section className="banner-about">
         <Banner imageUrl={ImgAbout} />
       </section>
