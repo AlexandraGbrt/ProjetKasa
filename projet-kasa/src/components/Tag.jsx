@@ -8,9 +8,7 @@ const Tag = ({ tags }) => {
   return (
     <ul className="tag">
       {tags.map((tag, index) => (
-        <li key={index}>
-          <p>{tag}</p>
-        </li>
+        <li key={index}>{tag}</li>
       ))}
     </ul>
   );

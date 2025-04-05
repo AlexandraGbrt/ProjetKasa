@@ -15,7 +15,7 @@ const Collapse = ({ title, content }) => {
       <button className="collapse-title">
         {title}
         <img
-          src={open ? arrowUp : arrowDown}
+          src={open ? arrowDown : arrowUp}
           className={`collapse-arrow ${open ? "open" : ""}`}
           alt="arrow"
           onClick={changeCollapse}

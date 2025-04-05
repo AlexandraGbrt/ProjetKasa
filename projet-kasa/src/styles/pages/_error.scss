@@ -7,13 +7,32 @@
   margin: 139px auto;
   gap: 139px;
 
+  @media (max-width: 768px) {
+    gap: 113px;
+    margin: 113px auto;
+  }
 
   h1 {
     font-size: 200px;
     color: $primary-color;
+
+    @media (max-width: 768px) {
+      font-size: 96px;
+    }
+  }
+
+  h2 {
+    @media (max-width: 768px) {
+      text-align: center;
+      width: 60%;
+    }
   }
 
   a {
     color: inherit;
+
+    @media (max-width: 768px) {
+      font-size: 14px;
+    }
   }
 }

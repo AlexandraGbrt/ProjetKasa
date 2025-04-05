@@ -8,6 +8,11 @@
     flex-direction: column;
     align-items: stretch;
 
+    @media (max-width: 768px) {
+        width: 100%;
+        margin-top: 20px;
+    }
+
     .collapse-title {
         display: flex;
         flex-direction: row;
@@ -20,35 +25,56 @@
         padding: 10px 20px 10px 15px;
         border-radius: 5px;
 
+        @media (max-width: 768px) {
+            font-size: 13px;
+            // height: 30px;
+            padding: 10px;
+        }
+
         .collapse-arrow {
             color: $text-color;
             cursor: pointer;
-            transition: transform 0.3s ease;
+            // transition: transform 0.3s ease;
+
+            @media (max-width: 768px) {
+                // width: 16px;
+                height: 10px;
+            }
         }
 
-        .collapse-arrow.open {
-            transform: rotate(-180deg);
-        }
+        // .collapse-arrow.open {
+        //     transform: rotate(0deg);
+        // }
 
         // .collapse-arrow.close {
         //     transform: rotate(-180deg);
         // }
-
-
     }
 
     .collapse-content {
         overflow: hidden;
         height: 0;
+        padding: 0;
         transition: height 0.4s ease, padding 0.4s ease;
     }
 
     .collapse-content.open {
         height: auto;
-        padding: 25px 28px 20px 20px;
         background-color: $collapse-bg-color;
         margin: 0;
+        padding: 20px;
         border-radius: 5px;
+
+        @media (max-width: 768px) {
+            padding: 13px;
+        }
+
+        p,
+        ul {
+            @media (max-width: 768px) {
+                font-size: 12px;
+            }
+        }
     }
 }
 
@@ -59,4 +85,16 @@
     flex-direction: row;
     gap: 76px;
 
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    li {
+        padding-bottom: 2px;
+
+        @media (max-width: 768px) {
+            font-size: 12px;
+        }
+    }
 }
