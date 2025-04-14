@@ -15,12 +15,16 @@ const Rental = () => {
     // Recherche le logement avec l'ID correspondant
     const logementFind = logementsData.find((logement) => logement.id === id);
     setLogement(logementFind);
-  }, [id]);
+
+    if (!logementFind) {
+      navigate("/error");
+    }
+  }, [id, navigate]);
 
   if (!logement) {
-    navigate("/error");
     return null;
   }
+  // TODO entre parenthèse
 
   return (
     <main className="rental">
