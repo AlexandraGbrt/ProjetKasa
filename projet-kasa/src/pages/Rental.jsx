@@ -24,7 +24,6 @@ const Rental = () => {
   if (!logement) {
     return null;
   }
-  // TODO entre parenthèse
 
   return (
     <main className="rental">
